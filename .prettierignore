@@ -3,3 +3,12 @@ node_modules
 out
 build
 public
+.prettierrc
+commitlint.config.ts
+eslint.config.mjs
+next.config.ts
+package-lock.json
+README.md
+tsconfig.json
+postcss.config.mjs
+package.json
