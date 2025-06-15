@@ -1,15 +1,44 @@
-import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import localFont from 'next/font/local';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const inter = Inter({
+  display: 'swap',
   subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
+  variable: '--font-inter',
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
+const vazir = localFont({
+  src: [
+    {
+      path: '../../public/fonts/Vazirmatn-Thin.woff2',
+      weight: '100',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/Vazirmatn-Light.woff2',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/Vazirmatn-Regular.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/Vazirmatn-Bold.woff2',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/Vazirmatn-Black.woff2',
+      weight: '900',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-vazir',
 });
 
 export const metadata: Metadata = {
@@ -23,8 +52,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+    <html className={`${inter.variable} ${vazir.variable}`}>
+      <body>{children}</body>
     </html>
   );
 }
