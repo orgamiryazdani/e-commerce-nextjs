@@ -33,6 +33,7 @@
     "gulp-replace": "^1.1.4",
     "gulp-svgmin": "^4.1.0",
     "gulp-wrap": "^0.15.0",
+    "husky": "^9.1.7",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.12",
     "tailwindcss": "^4",
